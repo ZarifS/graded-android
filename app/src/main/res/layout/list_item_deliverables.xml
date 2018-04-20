@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/deliverablelistgradient"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="8dp"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Assignment 1"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".75"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/weightIcon"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                app:srcCompat="@drawable/weight_kg" />
+
+            <TextView
+                android:id="@+id/itemWeight"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:paddingLeft="3dp"
+                android:text="5.0%"
+                android:textAlignment="textStart"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/itemGrade"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="-"
+            android:textAlignment="textEnd"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

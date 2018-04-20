@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/CourseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:text="Course Name"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/courselistgradient" />
+
+    <LinearLayout
+        android:id="@+id/courseInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/GradeLetter"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/Grade"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/CourseCompletion"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/courseInfoDescriptionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Grade Letter"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Grade"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Course Completion"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/courseContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/courselistgradient"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/assignmentHeader"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:text="ASSIGNMENTS"
+                    android:textAllCaps="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/toggleAssignment"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/expand_up" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/assignments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <tempo.graded.ExpandableHeightListView
+                    android:id="@+id/assignmentsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:focusable="false"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/courselistgradient"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:text="LABS"
+                    android:textAllCaps="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/toggleLabs"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/expand_up" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/labs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <tempo.graded.ExpandableHeightListView
+                    android:id="@+id/LabsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:focusable="false"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/courselistgradient"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:text="TESTS/FINALS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/toggleTests"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/expand_up" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <tempo.graded.ExpandableHeightListView
+                    android:id="@+id/TestsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:focusable="false"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

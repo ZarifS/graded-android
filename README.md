@@ -8,11 +8,10 @@ Designed using Android Studio and using Realm for database management.
 You can view the application on Google play: https://play.google.com/store/apps/details?id=tempo.graded&hl=en
 
 
-# Some Screenshots of Application
+# Some Screenshots of the Application
 
-![](screenshots/screenshot1.png) 
+![](screenshots/screenshot1.png)
+![](screenshots/screenshot5.png)
 ![](screenshots/screenshot2.png)
-![](screenshots/screenshot3.png)  
+![](screenshots/screenshot3.png)
 ![](screenshots/screenshot4.png)
-![](screenshots/screenshot5.png) 
-
